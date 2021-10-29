@@ -18,5 +18,5 @@
     # https://garden.org/plants/
   # > Option to upload plant photos
 
-# Color scheme/them:
+# Color scheme/theme:
   # > Background pattern Flower and/or foliage pattern
