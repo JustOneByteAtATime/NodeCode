@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Delete post</h1>
+    <h1>Remove this Plant Offer</h1>
     <form action="" method="post">{% csrf_token %}
-        <p>Are you sure you want to delete "{{ post.title }}"?</p>
+        <p>Are you sure you want to delete your "{{ post.title }}" offer? (click homepage otherwise)</p>
         <input type="submit" value="Confirm">
     </form>
 {% endblock content %}
