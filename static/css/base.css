@@ -1,6 +1,7 @@
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     font-size: 18px;
+    background-image: url("funplants3.jpeg");
 }
 
 header {
@@ -10,8 +11,24 @@ header {
 }
 
 header h1 a {
-    color: red;
+    color: #4b6e2c;
     text-decoration: none;
+}
+p {
+    color: #37541d;
+}
+
+h1 {
+    color: #416e19
+}
+
+a:hover {
+  color: #416e19;
+  background-color: transparent;
+}
+
+a:active {
+  color: #416e19;
 }
 
 .nav-left {
@@ -19,6 +36,7 @@ header h1 a {
 }
 
 .nav-right {
+    color: #416e19;
     display: flex;
     padding-top: 2rem;
 }
@@ -33,7 +51,7 @@ header h1 a {
 
 .post-entry h2 a,
 .post-entry h2 a:visited {
-    color: blue;
+    color: #416e19;
     text-decoration: none;
 }
 
@@ -43,5 +61,5 @@ header h1 a {
 }
 
 .post-entry h2 a:hover {
-    color: red;
+    color: #416e19;
 }
