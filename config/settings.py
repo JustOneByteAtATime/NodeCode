@@ -122,7 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-ALLOWED_HOSTS = ['herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['herokuapp.com', 'localhost', '127.0.0.1', 'evening-cliffs-59570.herokuapp.com']
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
