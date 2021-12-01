@@ -1,0 +1,65 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    background-image: url("funplants3.138dbf06c015.jpeg");
+}
+
+header {
+    border-bottom: 1px solid #999;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+header h1 a {
+    color: #4b6e2c;
+    text-decoration: none;
+}
+p {
+    color: #37541d;
+}
+
+h1 {
+    color: #416e19
+}
+
+a:hover {
+  color: #416e19;
+  background-color: transparent;
+}
+
+a:active {
+  color: #416e19;
+}
+
+.nav-left {
+    margin-right: auto;
+}
+
+.nav-right {
+    color: #416e19;
+    display: flex;
+    padding-top: 2rem;
+}
+
+.post-entry {
+    margin-bottom: 2rem;
+}
+
+.post-entry h2 {
+    margin: 0.5rem 0;
+}
+
+.post-entry h2 a,
+.post-entry h2 a:visited {
+    color: #416e19;
+    text-decoration: none;
+}
+
+.post-entry p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.post-entry h2 a:hover {
+    color: #416e19;
+}
