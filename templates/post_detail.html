@@ -6,10 +6,12 @@
         <p>{{ post.body }}</p>
         <p>{{ post.zipcode }}</p>
         {% if post.image %}
-        <p><img src="{{ post.image.url }}" width ="500" height ="500"></p>
+        <p><img src="{{ post.image.url }}" width ="300" height ="300"></p>
         {% endif %}
     </div>
 
+    {% if user.is_authenticated and post.author.id == user.id %}
     <a href="{% url 'post_edit' post.pk %}">+ Edit Plant Offer</a>
     <p><a href="{% url 'post_delete' post.pk %}">+ Delete Plant Offer</a></p>
+    {% endif %}
 {% endblock content %}
