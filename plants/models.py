@@ -3,13 +3,14 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
+from PIL import Image
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
     zipcode = models.CharField(max_length=5, null=True)
     date = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(null=True, blank=True, upload_to="images/")
+    image = models.ImageField(default='default_plant.jpg', upload_to='images')
     author = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
@@ -20,3 +21,14 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post_detail', args=[str(self.id)])
+
+    #image resize
+    def save(self, *args, **kwargs):
+        super().save()
+
+        img = Image.open(self.image.path)
+
+        if img.height > 300 or img.width > 300:
+            new_img = (300, 300)
+            img.thumbnail(new_img)
+            img.save(self.image.path)

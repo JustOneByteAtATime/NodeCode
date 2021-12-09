@@ -3,6 +3,7 @@
 {% block content %}
     <div class="post-entry">
         <h2>{{ post.title }}</h2>
+        <p><a href="{% url 'profile_page' post.author.profile.id %}"> {{post.author }}</a></p>
         <p>{{ post.body }}</p>
         <p>{{ post.zipcode }}</p>
         {% if post.image %}
