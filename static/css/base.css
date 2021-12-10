@@ -1,29 +1,36 @@
-body {
+body, html {
+	background-image: url("funplants3.jpeg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
     font-family: 'Helvetica', sans-serif;
     font-size: 18px;
-    background-image: url("funplants3.jpeg");
 }
 
+
 header {
-    border-bottom: 1px solid #999;
-    margin-bottom: 2rem;
+    border-bottom: none;
+    margin-bottom: none;
     display: flex;
 }
 
-header h1 a {
+header h1 {
     color: #4b6e2c;
     text-decoration: none;
 }
 p {
-    color: #37541d;
+    color: white;
 }
 
 h1 {
-    color: #416e19
+    color: white
 }
 
+a {
+	color: #4b6e2c;
+}
 a:hover {
-  color: #416e19;
+  color: #31471d;
   background-color: transparent;
 }
 
@@ -46,20 +53,24 @@ a:active {
 }
 
 .post-entry h2 {
+	color: #4b6e2c;
     margin: 0.5rem 0;
+    text-decoration: none;
 }
 
-.post-entry h2 a,
-.post-entry h2 a:visited {
-    color: #416e19;
-    text-decoration: none;
+.post-entry h2 a {
+	color: white;
+	text-decoration: none;
 }
 
 .post-entry p {
     margin: 0;
     font-weight: 400;
+    text-decoration: none;
+    color: #4b6e2c;
 }
 
 .post-entry h2 a:hover {
-    color: #416e19;
+    color: #4b6e2c;
+    text-decoration:none;
 }
