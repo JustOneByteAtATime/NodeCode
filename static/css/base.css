@@ -1,8 +1,8 @@
 body, html {
-	background-image: url("funplants3.jpeg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-image: url("funplants3.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Helvetica', sans-serif;
     font-size: 18px;
 }
@@ -15,19 +15,18 @@ header {
 }
 
 header h1 {
-    color: #4b6e2c;
+    color: white;
     text-decoration: none;
+}
+h2 {
+    color: white;
 }
 p {
     color: white;
 }
 
-h1 {
-    color: white
-}
-
 a {
-	color: #4b6e2c;
+    color: #4b6e2c;
 }
 a:hover {
   color: #31471d;
@@ -36,6 +35,9 @@ a:hover {
 
 a:active {
   color: #416e19;
+}
+ul li {
+    color: white;
 }
 
 .nav-left {
@@ -53,14 +55,14 @@ a:active {
 }
 
 .post-entry h2 {
-	color: #4b6e2c;
+    color: #4b6e2c;
     margin: 0.5rem 0;
     text-decoration: none;
 }
 
 .post-entry h2 a {
-	color: white;
-	text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 .post-entry p {
@@ -73,4 +75,7 @@ a:active {
 .post-entry h2 a:hover {
     color: #4b6e2c;
     text-decoration:none;
+}
+.post-entry div a {
+text-align: center;
 }
