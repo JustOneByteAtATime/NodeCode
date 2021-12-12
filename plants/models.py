@@ -32,3 +32,18 @@ class Post(models.Model):
             new_img = (300, 300)
             img.thumbnail(new_img)
             img.save(self.image.path)
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    comment = models.CharField(max_length=140)
+    author = models.ForeignKey(
+        get_user_model(),
+        on_delete=models.CASCADE,
+    )
+
+    def __str__(self):
+        return self.comment
+
+    def get_absolute_url(self):
+        return reverse ('post_detail')
+

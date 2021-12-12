@@ -1,18 +1,45 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="post-entry">
-        <h2>{{ post.title }}</h2>
-        <p><a href="{% url 'profile_page' post.author.profile.id %}"> {{post.author }}</a></p>
-        <p>{{ post.body }}</p>
-        <p>{{ post.zipcode }}</p>
-        {% if post.image %}
-        <p><img src="{{ post.image.url }}" width ="300" height ="300"></p>
-        {% endif %}
-    </div>
 
+<br>
+<div class="post-header">
+    <span class="font-weight-bold">{{ post.title }}</span> &middot;
+    <span class="text-muted"><a href="{% url 'profile_page' post.author.profile.id %}">{{ post.author }}</a>
+    | {{ post.date }}</span>
+    </div>
+<br>
+<div class="post-entry">
+    <div class="row no-gutters">
+        <div class="col-auto">
+            {% if post.image %}
+            <p><img class="rounded-circle" src="{{ post.image.url }}" width ="300" height ="300"></p>
+            {% endif %}
+        </div>
+        <div class="col">
+            <div class="card-block px-2">
+                <p>{{ post.body }}</p>
+                <br>
+                <p>Zipcode: {{ post.zipcode }}</p>
+            </div>
+        </div>
+    </div>
+    <br>
     {% if user.is_authenticated and post.author.id == user.id %}
     <a href="{% url 'post_edit' post.pk %}">+ Edit Plant Offer</a>
     <p><a href="{% url 'post_delete' post.pk %}">+ Delete Plant Offer</a></p>
     {% endif %}
+
+    <br>
+    <div class="post-footer">
+        {% for comment in post.comments.all %}
+            <p>
+                <span class="font-weight-bold">
+                    {{ comment.author }} &middot;
+                </span>
+                {{ comment }}
+            </p>
+        {% endfor %}
+    </div>
+</div>
 {% endblock content %}
