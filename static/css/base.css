@@ -18,6 +18,9 @@ header h1 {
     color: white;
     text-decoration: none;
 }
+h1 {
+    color: white;
+}
 h2 {
     color: white;
 }
@@ -40,8 +43,17 @@ ul li {
     color: white;
 }
 
-.nav-left {
-    margin-right: auto;
+.nav-left img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+
+.nav-left h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
 }
 
 .nav-right {
@@ -75,7 +87,4 @@ ul li {
 .post-entry h2 a:hover {
     color: #4b6e2c;
     text-decoration:none;
-}
-.post-entry div a {
-text-align: center;
 }

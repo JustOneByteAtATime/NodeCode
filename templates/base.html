@@ -10,14 +10,16 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="styleshee\t">
         <title>NodeCode</title>
+    <link rel="icon" href="NCLogoPlain.png" type="image/png">
     </head>
     <body>
         <div>
             <header>
                 <div class="nav-left">
-                    <h1><a href="{% url 'home' %}" style="text-decoration: none;">NodeCode</a></h1>
+                <img style="display:inline;" src="{% static 'css/NCLogoPlain.png' %}" alt="logo">
+<h1 style="display: inline;"><a href="{% url 'home' %}" style="text-decoration: none;">NodeCode</a></h1>
                 </div>
-                <div class="nav-right">
+                <div style = "position:relative; left:640px;" class="nav-right">
                     {% if user.is_authenticated %}
                         <a href="{% url 'post_new' %}"style="text-decoration: none;">Offer New Cuttings</a> | 
                         <a href="{% url 'profile' %}" style="text-decoration: none;">{{ user.username }}</a> | 
