@@ -2,17 +2,22 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
-      <div class="media">
-        <div class="media-body">
-          <h2 class="account-heading">{{ page_user.user.username }}</h2>
-          <p class="text-secondary">{{ page_user.user.email }}</p>
-          <p class="text-secondary">{{ page_user.user.first_name }}</p>
-          <p class="text-secondary">{{ page_user.user.last_name }}</p>
-          <p class="text-secondary">{{ page_user.user.profile.bio }}</p>
-          <img class="rounded-circle account-img" src="{{ page_user.user.profile.image.url }} " style="cursor: pointer;" width="200" height="200"/>
-        </div>
+    <br>
+    <br>
+    <div class="row no-gutters">
+      <div class="col-auto">
+          <p><img class="rounded-circle" src="{{ page_user.user.profile.image.url }}" width ="300" height ="300"></p>
       </div>
-      <!-- FORM HERE -->
-    </div>
+      <div class="col">
+          <div class="card-block px-2">
+              <p class="text-primary">{{ page_user.user.username }}</p>
+              <br>
+              <p>{{ page_user.user.email }}</p>
+              <br>
+              <p>{{ page_user.user.first_name}} {{page_user.user.last_name }}</p>
+              <br>
+              <p>{{ page_user.user.profile.bio }}</p>
+          </div>
+      </div>
+  </div>
 {% endblock content %}

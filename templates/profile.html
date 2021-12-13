@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}Profile Page{% endblock title %}
 {% block content %}
-    <div class="media">
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }} " style="cursor: pointer;" width="200" height="200"/>
-    </div>
+    <!--<div class="media">
+        <img class="rounded-circle" src="{{ user.profile.image.url }} " style="cursor: pointer;" width="300" height="300"/>
+    </div> -->
+    <br>
     {% if user_form.errors %}
         <div class="alert alert-danger alert-dismissible" role="alert">
             <div id="form_errors">
@@ -31,6 +32,7 @@
                         <label class="small mb-1">Last name:</label>
                             {{ user_form.last_name }}
                     </div>
+                    <br>
                     <div class="form-group">
                         <a href="{% url 'password_change' %}">Change Password</a>
                         
