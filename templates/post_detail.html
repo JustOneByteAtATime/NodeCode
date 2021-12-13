@@ -40,6 +40,7 @@
                 {{ comment }}
             </p>
         {% endfor %}
+        <a class="btn btn-default" href="{% url 'add_comment' post.pk %}">Add Comment</a>"
     </div>
 </div>
 {% endblock content %}

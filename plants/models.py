@@ -22,6 +22,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post_detail', args=[str(self.id)])
 
+    class Meta:
+        ordering = ['date']
+
     #image resize
     def save(self, *args, **kwargs):
         super().save()
@@ -36,6 +39,7 @@ class Post(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     comment = models.CharField(max_length=140)
+    date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
@@ -45,5 +49,8 @@ class Comment(models.Model):
         return self.comment
 
     def get_absolute_url(self):
-        return reverse ('post_detail')
+        return reverse('post_detail', args=[str(self.id)])
+
+    class Meta:
+        ordering = ['date']
 
