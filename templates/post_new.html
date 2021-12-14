@@ -2,6 +2,8 @@
 
 {% block content %}
     <h1>Your New Cuttings Offer</h1>
+	<a href="https://help.edublogs.org/fix-sideways-or-upside-down-images/"style="text-decoration: none;">*iphone and ipad users, PLEASE VISIT THIS LINK REGARDING ROTATED IMAGES</a>
+	<a href="https://garden.org/plants/"style="text-decoration: none;">Plant database link(NOT PLANT OFFERS)</a>
     <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Save">
