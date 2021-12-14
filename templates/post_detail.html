@@ -18,7 +18,7 @@
         </div>
         <div class="col">
             <div class="card-block px-2">
-                <p>{{ post.body }}</p>
+                <p>Plant Offer Details:  {{ post.body }}</p>
                 <br>
                 <p>Zipcode: {{ post.zipcode }}</p>
             </div>
@@ -32,6 +32,7 @@
 
     <br>
     <div class="post-footer">
+		<p> User Comments: </p>
         {% for comment in post.comments.all %}
             <p>
                 <span class="font-weight-bold">
@@ -41,7 +42,7 @@
             </p>
         {% endfor %}
         {% if user.is_authenticated %}
-        <a class="btn btn-default" href="{% url 'add_comment' post.pk %}">Add Comment</a>
+        <a class="btn btn-success" href="{% url 'add_comment' post.pk %}">Add Comment</a>
         {% endif %}
 
     </div>

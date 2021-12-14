@@ -11,6 +11,7 @@ from .forms import CommentForm
 class BlogListView(ListView):
     model = Post
     template_name = 'home.html'
+    ordering =['-id']
 
 class BlogDetailView(DetailView):
     model = Post

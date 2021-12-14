@@ -83,10 +83,11 @@ ul li {
     margin: 0;
     font-weight: 400;
     text-decoration: none;
-    color: #4b6e2c;
+    color: white;
 }
 
 .post-entry h2 a:hover {
     color: #4b6e2c;
     text-decoration:none;
 }
+
